@@ -1,0 +1,55 @@
+﻿# Installation based on hardware from 2019-01-27
+
+
+=== Main Tools ===
+
+7zip
+
+Firefox
+
+Google Chrome
+Google Drive
+Google Music
+Google Remote Desktop
+
+
+Nvidia GeForce Experience
+
+UltraSearch:
+https://www.jam-software.com/ultrasearch/
+
+AutoHotkey:
+https://www.autohotkey.com/download/
+
+VLC Player:
+https://www.videolan.org/vlc/
+
+Git:
+https://git-scm.com/download/win
+
+WinDirStat:
+https://windirstat.net/download.html
+
+CPU-Z
+- and/or -
+HWiNFO:
+https://www.hwinfo.com/download/
+
+VirtualBox:
+https://www.virtualbox.org/wiki/Downloads
+
+=== Hardware drivers & software ===
+
+Corsair:
+https://www.corsair.com/us/en/downloads
+
+Asus:
+https://www.asus.com/us/Motherboards/PRIME-B450-PLUS/HelpDesk_Download/
+
+AMD Ryzen (Master UI):
+https://www.amd.com/en/support/cpu/amd-ryzen-processors/amd-ryzen-5-desktop-processors/amd-ryzen-5-2600
+
+=== EXTRAS ===
+
+Steam:
+https://store.steampowered.com/about/
