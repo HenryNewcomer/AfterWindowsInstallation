@@ -15,6 +15,8 @@ Google Remote Desktop
 
 Nvidia GeForce Experience
 
+FireFTP
+
 UltraSearch:
 https://www.jam-software.com/ultrasearch/
 
@@ -53,3 +55,17 @@ https://www.amd.com/en/support/cpu/amd-ryzen-processors/amd-ryzen-5-desktop-proc
 
 Steam:
 https://store.steampowered.com/about/
+
+Amazon Kindle:
+https://www.amazon.com/kindlepcdownload/ref=klp_hz_win
+
+Windows 10 [TEMPORARY] Virtual Machine (target: Virtual Box):
+https://developer.microsoft.com/en-us/windows/downloads/virtual-machines
+
+=== COLLEGE RELATED ===
+
+Amazon Kindle:
+https://www.amazon.com/kindle-dbs/fd/kcp
+
+Brytewave Bookstore:
+https://www.microsoft.com/en-us/p/vitalsource-bookshelf/9pczl8zkv9nx?rtc=1&activetab=pivot:reviewstab
