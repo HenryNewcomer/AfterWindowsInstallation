@@ -1,7 +1,32 @@
 ﻿#Requires -RunAsAdministrator
 
 # A list of packages to install via Chocolatey
-$chocolateyPackages = @("llvm")
+$chocolateyPackages = @(
+    "firefox",
+    "7zip",
+    "emacs", # Check version
+    "mingw",
+    "llvm",
+    "cmake",
+    "vlc",
+    "googledrive"
+    "dropbox",
+    "git.install",
+    "autohotkey",
+    "filezilla",
+    "chrome",
+    "virtualbox",
+    "audacity",
+    "rufus",
+    "cpu-z",
+    "windirstat",
+    "ultrasearch",
+    "steam",
+    "krita",
+    "hwinfo",
+    "kindle",
+    "vscode"
+)
 
 # TODO Stop the recursive nature of this
 function henry-showSetupSteps {
