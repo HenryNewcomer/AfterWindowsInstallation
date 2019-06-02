@@ -28,8 +28,11 @@ $chocolateyPackages = @(
     "vscode"
 )
 
-$systemEnvVars = @(
+$setSystemEnvVars = @(
     "HOME $env:userprofile"
+)
+$addSystemPaths = @(
+    ";C:\mingw\bin" # TODO Update to chocolatey location?
 )
 
 # TODO Stop the recursive nature of this
@@ -68,8 +71,15 @@ function henry-showSetupSteps {
         }
         henry-showSetupSteps
     } elseif ($selection -eq 3) {
-        foreach($update in $systemEnvVars) {
+        echo "Adding new user variables"
+        foreach($update in $setSystemEnvVars) {
+            echo "Running command: setx $update ..."
             setx $update
+        }
+        echo "Adding paths to user environments"
+        foreach($addedValue in $addSystemPaths) {
+            echo "Running command: $env:Path += $addedValue ..."
+            $env:Path += $addedValue
         }
         # TODO Remove all of these (and move one), and just use a var to track if script should keep running or quit
         henry-showSetupSteps
