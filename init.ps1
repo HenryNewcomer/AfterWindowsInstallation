@@ -28,15 +28,20 @@ $chocolateyPackages = @(
     "vscode"
 )
 
+$systemEnvVars = @(
+    "HOME $env:userprofile"
+)
+
 # TODO Stop the recursive nature of this
 function henry-showSetupSteps {
     $setupSteps = [Management.Automation.Host.ChoiceDescription[]] @(
         New-Object Management.Automation.Host.ChoiceDescription("&Ubuntu","Ubuntu download")
         New-Object Management.Automation.Host.ChoiceDescription("&Chocolatey (Install)","Basic Chocolatey installation.")
         New-Object Management.Automation.Host.ChoiceDescription("Chocolatey (&Packages)","Install Chocolatey packages.")
+        New-Object Management.Automation.Host.ChoiceDescription("Setup &extra system vars","Programs like Emacs can make use of custom PATH variables.")
         New-Object Management.Automation.Host.ChoiceDescription("&Quit","Abort this script.")
     )
-    $global:selection = $Host.UI.PromptForChoice("Auto-Setup Step Selection","Which step would you like to proceed with?",$setupSteps,3)
+    $global:selection = $Host.UI.PromptForChoice("Auto-Setup Step Selection","Which step would you like to proceed with?",$setupSteps,4)
 
     if ($selection -eq 0) {
         echo "Attempting to download Ubuntu 18.04"
@@ -61,6 +66,12 @@ function henry-showSetupSteps {
             #    pause
             #}
         }
+        henry-showSetupSteps
+    } elseif ($selection -eq 3) {
+        foreach($update in $systemEnvVars) {
+            setx $update
+        }
+        # TODO Remove all of these (and move one), and just use a var to track if script should keep running or quit
         henry-showSetupSteps
     }
     # else quiting...
