@@ -8,9 +8,10 @@ Pre-config setup:
 1) Open PowerShell **as Administrator**
 
 2) In order to run the subsystem, enter:
+Set-ExecutionPolicy Bypass -Scope Process
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 
-3) Restart the computer
+3) Restart the computer if needed
 
 // PART TWO
 
