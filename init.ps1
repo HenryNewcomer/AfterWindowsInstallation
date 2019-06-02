@@ -41,6 +41,6 @@ function henry-showSetupSteps {
 
 # -----------------
 
-#echo "Automated setup for new Windows installation will start in a few seconds..."
-#Start-Sleep 4
+echo "Automated setup for new Windows installation will start in a few seconds..."
+Start-Sleep 4
 henry-showSetupSteps
