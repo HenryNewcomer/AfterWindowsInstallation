@@ -27,6 +27,7 @@ function henry-showSetupSteps {
         # TODO Save a txt/cache of packages that were (or weren't?) installed
         foreach($package in $chocolateyPackages) {
             choco install $package -y
+	    # FIXME All packages trigger echo
             if (Get-Package $package | Install-Package) {
                 continue;
             } else {
