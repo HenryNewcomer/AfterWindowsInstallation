@@ -9,7 +9,7 @@ $chocolateyPackages = @(
     "llvm",
     "cmake",
     "vlc",
-    "googledrive"
+    "googledrive",
     "dropbox",
     "git.install",
     "autohotkey",
@@ -52,16 +52,18 @@ function henry-showSetupSteps {
         # TODO Save a txt/cache of packages that were (or weren't?) installed
         foreach($package in $chocolateyPackages) {
             choco install $package -y
-	    # FIXME All packages trigger echo
-            if (Get-Package $package | Install-Package) {
-                continue;
-            } else {
-                echo "$package wasn't installed!"
-                pause
-            }
+	        # FIXME Not finding package properly &
+            # FIXME All packages trigger echo
+            #if (Get-Package $package | Install-Package) {
+            #    continue;
+            #} else {
+            #    echo "$package wasn't installed!"
+            #    pause
+            #}
         }
         henry-showSetupSteps
-    } # else quiting...
+    }
+    # else quiting...
 }
 
 # -----------------
@@ -69,3 +71,6 @@ function henry-showSetupSteps {
 echo "Automated setup for new Windows installation will start in a few seconds..."
 Start-Sleep 4
 henry-showSetupSteps
+
+echo "Quitting..."
+Start-Sleep 4
