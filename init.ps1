@@ -4,7 +4,8 @@
 $chocolateyPackages = @(
     "firefox",
     "7zip",
-    "emacs", # Check version
+    "discord",
+    "emacs", # Check version, though!
     "mingw",
     "llvm",
     "cmake",
@@ -25,7 +26,8 @@ $chocolateyPackages = @(
     "krita",
     "hwinfo",
     "kindle",
-    "vscode"
+    "vscode",
+    "Winaero"
 )
 
 $setSystemEnvVars = @(
